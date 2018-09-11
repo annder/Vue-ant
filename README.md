@@ -2,6 +2,8 @@ Fork for [Vue-code](https://github.com/HcySunYang/vue-design)
 
 Fork for [Self-code](https://github.com/canfoo/self-vue)
 
+Fork for [observer-ruanyif](http://es6.ruanyifeng.com/#docs/reflect#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E4%BD%BF%E7%94%A8-Proxy-%E5%AE%9E%E7%8E%B0%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F)
+
 Simple to say, Just to-way automatic binding is compare old object with new object, and their if equal, use function performance it.
 
 if unequal, just recurrent object.defineProperty function.
@@ -62,3 +64,6 @@ For instance:
 new Complier(data,express);
 this.mount.call(this);
 ```
+
+---
+
