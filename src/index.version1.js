@@ -12,7 +12,7 @@ export class Ant {
         
     }
     observer(obj, path) {
-        Object.keys(obj).forEach(function (key, index) {
+        Object.keys(obj).forEach(function (key) {
             //object value.
             var oldValue = obj[key];
             //copy called callback function.
@@ -39,7 +39,6 @@ export class Ant {
                     }
                     return oldValue;
                 }).bind(this)
-
             });
             if (isObject(obj[key] || isArray(obj[key]))) {
                 this.observer(obj[key], pathArray);

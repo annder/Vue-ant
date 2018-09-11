@@ -1,0 +1,29 @@
+{
+  "name": "Vue-code",
+  "version": "1.0.0",
+  "description": "Fork for [Vue-code](https://github.com/HcySunYang/vue-design)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annder/Vue-ant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annder/Vue-ant/issues"
+  },
+  "homepage": "https://github.com/annder/Vue-ant#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3"
+  }
+}
