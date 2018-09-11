@@ -22,6 +22,23 @@ function SelfVue({data}){
     observer(data);
     return this;
 }
+function observer ({data}){
+    let ref = data;
+    Object.keys(ref.data).forEach(key => {
+        Object.defineProperty(ref.data,key, { 
+            get(){
+                return ref.data[data];  
+            },
+            set(newValue){
+                if (newValue !== ref) {
+                    observer(ref);
+                }
+            ref[data] = newValue;
+            }
+    });
+    })
+    return this;
+}
 this.SelfVue.proxykeys = function(key){
     //This object is collect all object to render!
 Object.defineProperty(this,key, {
@@ -33,4 +50,15 @@ Object.defineProperty(this,key, {
         }
     })
 }
+```
+
+But, how to write life cycle in the programer?
+
+The solvation is create a complier then call this arguments to life cycle.
+
+For instance:
+
+```js
+new Complier(data,express);
+this.mount.call(this);
 ```
