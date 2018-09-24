@@ -24,6 +24,10 @@
   },
   "homepage": "https://github.com/annder/Vue-ant#readme",
   "devDependencies": {
-    "babel-core": "^6.26.3"
+    "babel-core": "^6.26.3",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "babel-loader": "^8.0.2",
+    "babel-preset-env": "^1.7.0"
   }
 }
