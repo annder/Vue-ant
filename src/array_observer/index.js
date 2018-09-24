@@ -6,17 +6,18 @@ const methodsToPaths = ['push', 'pop', 'shift',
 	'unshift', 'splice',
 	'sort', 'reverse'
 ];
-methodsToPaths.forEach((keyword) => {
-	const original = arrayProto[keyword];
-	Object.defineProperty(arrayMethods, keyword, {
-		value() {
-			const result = original.apply(this, arguments);
-			console.log('Hello');
-			return result;
-		}
-	});
-});
 
-const array_ = [];
-array_.__proto__ = arrayMethods;
-array_.push(1);
+export function observer_array(array_, fn) {
+	methodsToPaths.forEach((keyword) => {
+		const original = arrayProto[keyword];
+		Object.defineProperty(arrayMethods, keyword, {
+			value() {
+				const result = original.apply(this, arguments);
+				fn.call(array_);
+				return result;
+			}
+		});
+	});
+	array_.__proto__ = arrayMethods;
+	return array_;
+}
