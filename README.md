@@ -67,3 +67,28 @@ this.mount.call(this);
 
 ---
 
+And array observer just simple writhing.
+
+It call self for codes:
+
+```js
+// Store array prototype... 
+const ArrayPrototype = Array.prototype;
+const MethodsArrayPrototype = Object.create(ArrayPrototype);
+const ArrayOperate = ['push','shift','unshift','pop','splice','sort','reverse'];
+
+ArrayOpreate.forEach((keyword)=>{
+    
+    Object.defineProperty(MethodsArrayPrototype,keyword,{
+        value() {
+            // reserve
+        const result = ArrayArrayPrototype.apply(this,arguments);           
+        }
+        // observer
+        return result;
+    })
+})
+const array_ = [];
+array_.__proto__ = arrayMethods;
+///array operate.
+```
